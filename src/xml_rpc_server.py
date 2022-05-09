@@ -1,11 +1,15 @@
 from xmlrpc.server import SimpleXMLRPCServer
 def fibonacci(num):
-  if num < 0:
+  if num <= 0:
     print("Não é possível obter o fibonacci de um numero negativo.")
-  if ((num == 0) or (num == 1)):
-    return num
+  elif num == 1:
+    return 0
+  elif ((num == 2) or (num == 3)):
+    return 1
   else:
     return fibonacci(num - 1) + fibonacci(num - 2)
+
+
 
 if __name__== "__main__":
   server = SimpleXMLRPCServer(( "localhost" , 6789))
