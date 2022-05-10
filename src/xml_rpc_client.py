@@ -4,4 +4,4 @@ if __name__== "__main__":
     numero = int(input("Informe um inteiro para que será sequencia de fibonacci: "))
     for x in range(1,(numero+1)):
         res = proxy.fibonacci(x)
-        print(f"numero é {x} e seu valor é  {res}")
+        print(f"numero é: {x} e seu valor é : {res}")
