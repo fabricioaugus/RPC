@@ -1,3 +1,4 @@
+# 
 from xmlrpc.server import SimpleXMLRPCServer
 def fibonacci(num):
   if num <= 0:
@@ -12,6 +13,9 @@ def fibonacci(num):
 
 
 if __name__== "__main__":
+  # Cria uma nova instância do servidor. 
+  # Esta classe fornece métodos para registro de funções que podem 
+  # ser chamadas pelo protocolo XML-RPC. SimpleXMLRPCServer
   server = SimpleXMLRPCServer(( "localhost" , 6789))
   server.register_function(fibonacci,"fibonacci")
   server.serve_forever()
